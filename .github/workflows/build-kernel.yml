@@ -31,5 +31,7 @@ jobs:
     - name: Upload Image artifact
       uses: actions/upload-artifact@v4
       with:
-        name: Image
-        path: build/arch/arm64/boot/Image
+        name: Compiled Kernel Directory
+        path: |
+          build.zip
+          
