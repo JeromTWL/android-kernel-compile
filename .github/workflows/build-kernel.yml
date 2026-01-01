@@ -29,7 +29,7 @@ jobs:
         ./build.sh
 
     - name: Upload Image artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: Image
         path: build/arch/arm64/boot/Image
