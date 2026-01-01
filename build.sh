@@ -11,6 +11,8 @@ make clean
 
 make mrproper
 
-make O=../build ARCH=arm64 PATH=$BINARIES CC=clang CROSS_COMPILE=aarch64-linux-android- CLANG_TRIPLE=aarch64-linux-gnu- BRAND_SHOW_FLAG=oneplus TARGET_PRODUCT=msmkalama nuwa_GKI.config
+make O=../build ARCH=arm64 PATH=$BINARIES CC=clang CROSS_COMPILE=aarch64-linux-android- CLANG_TRIPLE=aarch64-linux-gnu- BRAND_SHOW_FLAG=xiaomi TARGET_PRODUCT=msmkalama vendor/nuwa_GKI.config
 
-make -j8 O=$ROOTDIR/build ARCH=arm64 PATH=$BINARIES CC=clang CROSS_COMPILE=aarch64-linux-android- CLANG_TRIPLE=aarch64-linux-gnu- DEFCONFIG=nuwa_GKI.config DTC_EXT=$ROOTDIR/android_prebuilts_tools-lineage/linux-x86/dtc/dtc BRAND_SHOW_FLAG=xiaomi TARGET_PRODUCT=msmkalama
+make -j8 O=$ROOTDIR/build ARCH=arm64 PATH=$BINARIES CC=clang CROSS_COMPILE=aarch64-linux-android- CLANG_TRIPLE=aarch64-linux-gnu- DEFCONFIG=vendor/nuwa_GKI.config DTC_EXT=$ROOTDIR/android_prebuilts_tools-lineage/linux-x86/dtc/dtc BRAND_SHOW_FLAG=xiaomi TARGET_PRODUCT=msmkalama
+
+zip -r $ROOTDIR/build.zip $ROOTDIR/build/ -5
